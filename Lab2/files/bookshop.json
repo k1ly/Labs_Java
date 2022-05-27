@@ -1,0 +1,37 @@
+{
+  "storage": [
+    {
+      "product": {
+        "name": "Adventures",
+        "author": "Johnson",
+        "id": 1,
+        "price": 926,
+        "year": 1940,
+        "pType": "Book"
+      },
+      "amount": 44
+    },
+    {
+      "product": {
+        "artist": "Shiitake",
+        "name": "Love dramatic!",
+        "author": "Hiragana",
+        "id": 2,
+        "price": 473,
+        "year": 2009,
+        "pType": "Comics"
+      },
+      "amount": 50
+    },
+    {
+      "product": {
+        "theme": "Wedding",
+        "id": 3,
+        "price": 58,
+        "year": 0,
+        "pType": "Postcard"
+      },
+      "amount": 19
+    }
+  ]
+}

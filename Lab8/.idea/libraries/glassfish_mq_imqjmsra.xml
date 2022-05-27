@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="glassfish.mq.imqjmsra" type="repository">
+    <properties maven-id="org.glassfish.mq:imqjmsra:5.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/imqjmsra/5.1/imqjmsra-5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/imqbroker/5.1/imqbroker-5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/imqutil/5.1/imqutil-5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/imqxm/5.1/imqxm-5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/jaxm-api/5.1/jaxm-api-5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/mq/imq/5.1/imq-5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/jms/javax.jms-api/2.0/javax.jms-api-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

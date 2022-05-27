@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Lab8_Servlet:war">
+    <output-path>$PROJECT_DIR$/Lab8_Servlet/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Lab8_Servlet</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Lab8_Servlet-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Lab8_Servlet:war exploded" />
+    </root>
+  </artifact>
+</component>

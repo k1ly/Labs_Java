@@ -1,0 +1,2 @@
+19:33:52.060 [main] FATAL by.belstu.it.lyskov.connection.ConnectionPool - java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+19:33:52.070 [main] FATAL by.belstu.it.lyskov.connection.ConnectionPool - java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver

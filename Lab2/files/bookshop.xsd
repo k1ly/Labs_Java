@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="bookshop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="shelf" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="shelf">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element ref="book"/>
+                    <xs:element ref="comics"/>
+                    <xs:element ref="postcard"/>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="amount" use="required" type="xs:positiveInteger"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="book">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="id" type="xs:positiveInteger"/>
+                <xs:element name="year" default="0">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="2022"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="price" type="xs:nonNegativeInteger" default="0"/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="author" type="xs:string"/>
+            </xs:all>
+            <xs:attribute name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Book"/>
+                        <xs:enumeration value="Comics"/>
+                        <xs:enumeration value="Postcard"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="comics">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="id" type="xs:positiveInteger"/>
+                <xs:element name="year" default="0">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:nonNegativeInteger">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="2021"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="price" type="xs:nonNegativeInteger" default="0"/>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="author" type="xs:string"/>
+                <xs:element name="artist" type="xs:string"/>
+            </xs:all>
+            <xs:attribute name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Book"/>
+                        <xs:enumeration value="Comics"/>
+                        <xs:enumeration value="Postcard"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postcard">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="id" type="xs:positiveInteger"/>
+                <xs:element name="year" type="xs:nonNegativeInteger" fixed="0"/>
+                <xs:element name="price" type="xs:nonNegativeInteger" default="0"/>
+                <xs:element name="theme" type="xs:string"/>
+            </xs:all>
+            <xs:attribute name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Book"/>
+                        <xs:enumeration value="Comics"/>
+                        <xs:enumeration value="Postcard"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
