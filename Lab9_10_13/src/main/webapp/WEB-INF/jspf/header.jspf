@@ -1,0 +1,47 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+         import="by.belstu.it.lyskov.bean.UserRole" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<header class="head">
+    <div class="header">
+        <div class="header-left">
+            <nav class="nav-bar">
+                <div>
+                    <a href="${pageContext.request.contextPath}">
+                        ГЛАВНАЯ
+                    </a>
+                </div>
+                |
+                <div>
+                    <a href="${pageContext.request.contextPath}/lombard">
+                        СПИСОК
+                    </a>
+                </div>
+                |
+                <div>
+                    <a href="${pageContext.request.contextPath}/jsp/addItem.jsp">
+                        ДОБАВИТЬ
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+            <c:if test="${!UserRole.GUEST.equals(sessionScope.user.roleName)}">
+                <div class="user-actions">
+                    <button id="user-drop-btn">
+                        <span>${sessionScope.user.name}</span>
+                        <svg width="10px" height="10px">
+                            <polygon class="ua-dropdown" points="0,3 10,3 5,8"
+                                     style="fill: rgba(0,0,50,0.7);"></polygon>
+                        </svg>
+                    </button>
+                    <div id="user-actions-dropdown">
+                        <form action="${pageContext.request.contextPath}/auth" method="post">
+                            <input type="hidden" name="command" value="sign_out">
+                            <input id="sign-out-btn" type="submit" value="Выйти">
+                        </form>
+                    </div>
+                </div>
+            </c:if>
+        </div>
+    </div>
+</header>

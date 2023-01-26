@@ -1,0 +1,321 @@
+.lombard {
+    padding: 10px;
+    width: 127px;
+    border: 2px solid #3d3c3c;
+    background-color: #ffb4b4;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.errorMessage {
+    padding: 10px;
+    color: red;
+    text-align: center;
+}
+
+.head {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    background-color: rgb(32, 30, 40);
+    width: 100%;
+    height: 100px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: left;
+    width: 400px;
+    height: 60%;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    float: right;
+    width: 333px;
+    height: 60%;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.nav-bar a {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-bar a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.user-actions {
+    position: relative;
+    display: inline-block;
+}
+
+#user-drop-btn {
+    padding: 16px;
+    border: none;
+    background-color: #01a998;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#user-drop-btn:hover {
+    background-color: #2980B9;
+}
+
+#user-actions-dropdown {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+#user-actions-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#user-actions-dropdown a:hover {
+    background-color: #ddd
+}
+
+#sign-out-btn {
+    margin: 5px;
+    width: calc(100% - 10px);
+    border-color: #621427;
+    border-radius: 5px;
+    background-color: #d55959;
+    color: white;
+}
+
+#sign-out-btn:hover {
+    border-color: #bdebff;
+    background-color: #cfbfff;
+    color: #17061e;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    border-style: solid;
+    border-width: 3px 0 0 0;
+    border-image-source: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 52%, rgba(255, 255, 255, 0));
+    border-image-slice: 1;
+    width: 100%;
+    height: 150px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    background-color: #79a9d0;
+    width: 75%;
+}
+
+.auth-page, .reg-page, .recover-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.auth-container {
+    width: 400px;
+    border: 3px solid #ffffff;
+    background-color: #d2f1ff;
+}
+
+.reg-container {
+    width: 600px;
+    border: 3px solid #230434;
+    background-color: #ffdad2;
+}
+
+.recover-container {
+    width: 400px;
+    border: 3px solid #dbffc0;
+    background-color: #fff6d2;
+}
+
+#login, #password, #repeat-psw, #name, #email {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 8px 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.reg-container #login,
+.reg-container #password,
+.reg-container #repeat-psw,
+#name, #email {
+    margin: 3px 0;
+    padding: 4px 6px;
+}
+
+#show-password {
+    position: absolute;
+    left: calc(50% + 300px - 57px);
+    margin-top: 7px;
+    border: none;
+    background: transparent;
+}
+
+#recover-form #show-password {
+    left: calc(50% + 300px - 157px);
+    margin-top: 14px;
+}
+
+#show-password:hover,
+#show-password:focus {
+    outline: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+
+}
+
+#repeat-check {
+    position: absolute;
+    left: calc(50% + 300px - 50px);
+    margin-top: 7px;
+    background: transparent;
+    color: red;
+}
+
+#recover-form #repeat-check {
+    left: calc(50% + 300px - 150px);
+    margin-top: 14px;
+}
+
+#auth-submit, #reg-submit {
+    margin: 8px 0;
+    padding: 14px 20px;
+    width: 100%;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+
+#password-check {
+    display: none;
+    position: absolute;
+    top: calc(30vh);
+    left: calc(50vw + 315px);
+    padding: 20px;
+    background: #f1f1f1;
+    color: #000;
+}
+
+#recover-form #password-check {
+    top: calc(25vh);
+    left: calc(50vw + 215px);
+}
+
+#password-check p {
+    padding: 10px 35px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: '✔';
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: '❌';
+}
+
+.auth-footer, .reg-footer, .recover-footer {
+    padding: 16px;
+    background-color: #f1f1f1;
+}
+
+.cancel-auth, .cancel-reg, .cancel-recover {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 10px 18px;
+    width: auto;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+
+}
+
+.cancel-auth:hover,
+.cancel-reg:hover,
+.cancel-recover:hover {
+    opacity: 0.8;
+    color: white;
+    text-decoration: none;
+}
+
+.auth-actions, .reg-actions {
+    float: right;
+}
+
+.auth-actions div {
+    width: 100%;
+    text-align: right;
+}
+
+.add-item-content {
+    margin: auto;
+    padding: 20px;
+    width: 600px;
+    border: 1px solid #888;
+    background-color: white;
+}
