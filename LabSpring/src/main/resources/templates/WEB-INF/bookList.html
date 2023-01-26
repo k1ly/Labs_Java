@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book list</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 th:utext="Booklist"></h1>
+<h2>
+    <a th:href="@{/addbook}">Add new book</a>
+</h2>
+<form th:action="@{/editbook}" method="POST">
+    <div style="display: flex; justify-content: space-between; margin: 10px; width: 20%">
+        <input type="submit" name="edit" value="Edit"/>
+        <input type="submit" name="delete" value="Delete"/>
+    </div>
+    <table th:class="tbl">
+        <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+        <tr th:each="book, i : ${bookList}">
+            <td><input type="radio" th:name="book" th:value="${i.index}"/></td>
+            <td th:utext="${book.title}"></td>
+            <td th:utext="${book.author}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

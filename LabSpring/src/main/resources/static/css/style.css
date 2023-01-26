@@ -1,0 +1,24 @@
+
+h1 {
+    margin: 0 auto;
+    width: fit-content;
+    color: #42ee9c;
+    font-size: 3em;
+}
+
+.tbl, .tbl th, .tbl td {
+    border: 1px solid green;
+}
+.tbl th {
+    color: #00bbff;
+    background-color: gray;
+}
+.tbl td {
+    color: #ec0b4e;
+    background-color: lightgray;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+}
